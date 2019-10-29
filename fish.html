@@ -79,7 +79,7 @@
               {idx:11, cnt:2},
               {idx:12, cnt:2},
               {idx:13, cnt:1},
-              {idx:14, cnt:1},
+              {idx:14, cnt:2},
             ]
           },
           {
@@ -96,8 +96,8 @@
               {idx:10, cnt:2},
               {idx:11, cnt:2},
               {idx:12, cnt:2},
-              {idx:13, cnt:1},
-              {idx:14, cnt:1},
+              {idx:13, cnt:1}, 
+              {idx:14, cnt:2},
             ]
           },
           {
@@ -113,7 +113,7 @@
               {idx:11, cnt:2},
               {idx:12, cnt:2},
               {idx:13, cnt:1},
-              {idx:14, cnt:1},
+              {idx:14, cnt:2},
             ]
           },
           {
@@ -131,7 +131,7 @@
               {idx:11, cnt:2},
               {idx:12, cnt:2},
               {idx:13, cnt:1},
-              {idx:14, cnt:1},
+              {idx:14, cnt:2},
             ]
           }
         ],
@@ -157,73 +157,73 @@
           //3
           {
             name: '히트 페이스 야광 테이프',
-            price: '900',
+            price: '810',
             img: 'http://ai.esmplus.com/mallfishing/fishingmall/sum/20150817_01.jpg'
           },
           //4
           {
-            name : '나이트메어 야광에기',
-            price: '1250',
+            name : '나이트메어 야광에기 2.5호',
+            price: '1125',
             img: 'http://ai.esmplus.com/mallfishing/fishingmall/sum/20150828_03.jpg'
           },
           //5
           {
             name : '스트레이트 수평 에기 (그린)',
-            price: '990',
+            price: '891',
             img: 'http://zlenak.co.kr//data/goods/19/09/38/1000000762/1000000762_list_061.jpg'
           },
           //6
           {
             name : '스트레이트 수평 에기 (오렌지)',
-            price: '990',
+            price: '891',
             img: 'http://zlenak.co.kr//data/goods/19/09/38/1000000762/1000000762_list_061.jpg'
           },
           //7
           {
             name : '스트레이트 수평 에기 (레드헤드)',
-            price: '990',
+            price: '891',
             img: 'http://zlenak.co.kr//data/goods/19/09/38/1000000762/1000000762_list_061.jpg'
           },
           //8
           {
             name : '스트레이트 수평 에기 (블루)',
-            price: '990',
+            price: '891',
             img: 'http://zlenak.co.kr//data/goods/19/09/38/1000000762/1000000762_list_061.jpg'
           },
           //9
           {
             name : '에기스커트',
-            price: '590',
+            price: '531',
             img: 'http://ai.esmplus.com/mallfishing/fishingmall/sum/20180801_03.jpg'
           },
           //10
           {
-            name : '야광어부에기 (형광) ',
+            name : 'ZLE 야광어부에기 (형광) ',
             price: '405',
             img: 'http://ai.esmplus.com/mallfishing/fishingmall/sum/20150828_02.jpg'
           },
           //11
           {
-            name : '야광어부에기 (레드) ',
+            name : 'ZLE 야광어부에기 (레드) ',
             price: '405',
             img: 'http://ai.esmplus.com/mallfishing/fishingmall/sum/20150828_02.jpg'
           },
           //12
           {
             name : '히트페이스 진주에기 (야광)',
-            price: '590',
+            price: '531',
             img: 'http://ai.esmplus.com/mallfishing/fishingmall/sum/20170817_01.jpg'
           },
           //13
           {
             name : '히트페이스 진주에기 (핑크)',
-            price: '590',
+            price: '531',
             img: 'http://ai.esmplus.com/mallfishing/fishingmall/sum/20170817_01.jpg'
           },
           //14
           {
             name : '히트페이스 진주에기 (실버)',
-            price: '590',
+            price: '531',
             img: 'http://ai.esmplus.com/mallfishing/fishingmall/sum/20170817_01.jpg'
           },
         ]
@@ -233,7 +233,7 @@
           var sumAmt = 0;
           var _fishs = this.fishs
           this.peoples[idx].items.forEach(function(v){
-              sumAmt += Number(v.cnt) + Number(_fishs[v.idx].price)
+              sumAmt += Number(v.cnt) * Number(_fishs[v.idx].price)
 
           })
           return sumAmt
