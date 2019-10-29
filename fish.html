@@ -12,11 +12,28 @@
       <v-content>
         <v-container>
             <v-row>
-            <v-tabs v-model="tabs">
-              <v-tab v-for="(people,idx) in peoples" :key="idx">
-                {{ people.name }} 
-              </v-tab>
-            </v-tabs>
+                <v-btn
+                color="primary"
+                dark
+                @click.stop="dialog = true"
+              >
+                주문 이미지
+              </v-btn>
+            </v-row>
+            <v-row>
+              <v-dialog
+                  v-model="dialog"
+                  max-width="1000"
+                >
+                <v-img src="cap1.png"></v-img>
+                <v-img src="cap2.png"></v-img>
+                </v-dialog>
+                
+              <v-tabs v-model="tabs">
+                <v-tab v-for="(people,idx) in peoples" :key="idx">
+                  {{ people.name }} 
+                </v-tab>
+              </v-tabs>
             </v-row>
              <v-row>
                 <v-col cols="12" v-for="item in peoples[tabs].items" :key="item.idx">
@@ -63,6 +80,7 @@
       vuetify: new Vuetify(),
       data: {
         tabs: 0,
+        dialog: false,
         peoples: [
           {
             name: '실장님',
